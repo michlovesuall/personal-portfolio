@@ -5,9 +5,56 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../dist/css/output.css">
+    <link rel="stylesheet" href="../dist/css/custom.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/a7504709e0.js" crossorigin="anonymous"></script>
+    <link rel="icon" href="../dist/images/LOGO.png">
+    <title>Michael Amata | Portfolio</title>
     <title>Document</title>
 </head>
 <body>
-    
+    <header class="h-20 flex bg-sky-950">
+        <div class="px-4 flex items-center justify-center flex-shrink sm:flex-1">
+            <img class="hidden md:block min-h-6 max-h-9" src="../dist/images/NAME LIGHT.png" alt="My Banner Logo">
+            <img class="block w-12 ml-6 sm:mx-auto md:hidden" width="75" src="../dist/images/LOGO.png" alt="My Logo">
+        </div>
+        <div class="bg-sky-900 flex flex-1 items-center justify-center absolute w-full h-12 md:bg-sky-950 md:h-full md:static top-20">
+            <ul class="flex gap-6"> 
+                <li><a class="text-white text-md hover:text-amber-300" href="#">HOME</a></li>
+                <li><a class="text-white text-md hover:text-amber-300" href="#">ABOUT ME</a></li>
+                <li><a class="text-white text-md hover:text-amber-300" href="#">PORTFOLIO</a></li>
+            </ul>
+        </div>
+        <div class="flex-1 justify-end px-4 flex items-center gap-5 sm:justify-center">
+            <a href="https://github.com/michlovesuall" target="_blank"><img class="filter invert" width="40" src="../dist/images/githublogo.png" alt="Github Logo"></a>
+            <button class="mr-6 px-4 py-1.5 bg-amber-400 hover:bg-amber-300 cursor-pointer">Contact Me</button>
+        </div>
+    </header>
+    <main>
+        <section class="bg-sky-950 flex h-[590px]" id="home">
+            <div class="flex flex-col justify-center gap-2 py-14 flex-1 relative">
+                <div class="flex flex-col items-center sm:px-8 md:pl-12 md:items-start px-6 z-20 absolute">
+                    <h3 class="text-3xl md:text-[40px] text-white">Hi,</h3>
+                    <h1 class="text-center md:text-left text-[2.2rem] md:text-[56px] lg:text-[68px] text-white">I'm <span class="font-bold text-amber-400">Michael Amata</span></h1>
+                    <p class="text-slate-400 text-lg text-center md:text-left">Aspiring Web Developer with a dedication to continuous learning and a drive to contribute innovative solutions to the ever-evolving digital landscape</p>
+                    <button class="mt-4 w-44 mr-6 px-4 py-1.5 bg-amber-400 hover:bg-amber-300 cursor-pointer">Download CV<i class="fa-solid ml-1 fa-circle-down"></i></button>
+                </div>
+                <div class="z-10 absolute lg:pl-8 pl-6 md:pl-4 sm:pl-8">
+                    <p class="text-[150px] md:text-[145px] text-center lg:text-left lg:text-[190px] sm:text-[200px] leading-tight font-bold text-white opacity-[0.03]">WEB DEV<span class="hidden md:inline md:text-[145px] lg:text-[190px]">ELOPER</span></p>
+                </div>
+            </div>
+            <div class="flex-1 justify-center items-center hidden md:flex">
+                <img width="400" src="../dist/images/portrait.png" alt="">
+            </div>
+        </section>
+        <section id="aboutme">
+
+        </section>
+        <section id="portfolio">
+
+        </section>
+    </main>
 </body>
 </html>
