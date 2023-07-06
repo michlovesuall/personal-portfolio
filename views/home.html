@@ -4,6 +4,8 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <link rel="stylesheet" href="../dist/css/output.css">
     <link rel="stylesheet" href="../dist/css/custom.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -14,8 +16,27 @@
     <title>Michael Amata | Portfolio</title>
     <title>Document</title>
 </head>
-<body>
-    <header class="h-20 flex bg-sky-950 sticky top-0 z-50">
+<body class="bg-sky-950 overflow-hidden">
+    <div class="loader-wrapper fixed top-0 left-0 right-0 bottom-0 bg-white z-50 flex items-center justify-center">
+        <div class="loader">
+            <svg viewBox="0 0 80 80">
+                <circle id="test" cx="40" cy="40" r="32"></circle>
+            </svg>
+        </div>
+        
+        <div class="loader triangle">
+            <svg viewBox="0 0 86 80">
+                <polygon points="43 8 79 72 7 72"></polygon>
+            </svg>
+        </div>
+        
+        <div class="loader">
+            <svg viewBox="0 0 80 80">
+                <rect x="8" y="8" width="64" height="64"></rect>
+            </svg>
+        </div>
+    </div>
+    <header id="header" class="h-20 flex bg-sky-950 sticky top-0 z-40">
         <div class="px-4 flex items-center justify-center flex-shrink sm:flex-1">
             <img class="hidden md:block min-h-6 max-h-9" src="../dist/images/NAME LIGHT.png" alt="My Banner Logo">
             <img class="block w-12 ml-6 sm:mx-auto md:hidden" width="75" src="../dist/images/LOGO.png" alt="My Logo">
@@ -29,23 +50,22 @@
         </div>
         <div class="flex-1 justify-end px-4 flex items-center gap-5 sm:justify-center">
             <a href="https://github.com/michlovesuall" target="_blank"><img class="filter invert" width="40" src="../dist/images/githublogo.png" alt="Github Logo"></a>
-            <button class="mr-6 px-4 py-1.5 bg-amber-400 hover:bg-amber-300 cursor-pointer">Contact Me</button>
         </div>
     </header>
     <main>
         <section class="bg-sky-950 flex h-[540px]" id="home">
             <div class="flex flex-col justify-center gap-2 py-14 flex-1 relative">
-                <div class="flex flex-col items-center sm:px-8 md:pl-12 lg:pl-20 md:items-start px-6 z-20 absolute">
+                <div data-aos="fade-up" class="flex flex-col items-center sm:px-8 md:pl-12 lg:pl-20 md:items-start px-6 z-20 absolute">
                     <h3 class="text-3xl md:text-[40px] text-white">Hi,</h3>
                     <h1 class="text-center md:text-left text-[2.2rem] md:text-[56px] lg:text-[72px] text-white">I'm <span class="font-bold text-amber-400 whitespace-nowrap">Michael</span></h1>
                     <p class="text-slate-400 text-lg text-center md:text-left">Aspiring Web Developer with a dedication to continuous learning and a drive to contribute innovative solutions to the ever-evolving digital landscape</p>
-                    <button class="mt-4 w-44 mr-6 px-4 py-1.5 bg-amber-400 hover:bg-amber-300 cursor-pointer">Download CV<i class="fa-solid ml-1 fa-circle-down"></i></button>
+                    <a class="mt-4 w-44 mr-6 px-4 py-1.5 bg-amber-400 hover:bg-amber-300 cursor-pointer" href="../dist/files/AMATA, Michael Bersola _ RESUME.pdf">Download CV<i class="fa-solid ml-1 fa-circle-down"></i></a>
                 </div>
                 <div class="z-10 absolute lg:pl-8 pl-6 md:pl-4 sm:pl-8">
                     <p class="text-[150px] md:text-[145px] text-center lg:text-left lg:text-[190px] sm:text-[200px] leading-tight font-bold text-white opacity-[0.03]">WEB DEV<span class="hidden md:inline md:text-[145px] lg:text-[190px]">ELOPER</span></p>
                 </div>
             </div>
-            <div class="flex-1 justify-center items-center hidden md:flex z-30">
+            <div data-aos="fade-up" class="flex-1 justify-center items-center hidden md:flex z-30">
                 <img width="400" src="../dist/images/portrait.png" alt="Portrait Image">
             </div>
             <ul class="circles">
@@ -64,24 +84,24 @@
         <section class="flex flex-col items-center justify-center bg-sky-900" id="aboutme">
             <h1 class="text-[2rem] tracking-widest py-8 text-amber-400">ABOUT ME</h1>
             <div class="flex px-16 py-8">
-                <figure class="w-1/3 hidden md:block" id="illustration">
+                <figure data-aos="fade-left" class="w-1/3 hidden md:block" id="illustration">
                     <img class="mx-auto" width="300" src="../dist/images/aboutme.png" alt="">
                 </figure>
-                <div class="w-2/3 px-8 py-4" id="details">
+                <div data-aos="fade-right" class="md:w-2/3 w-full px-1 md:px-8 py-4" id="details">
                     <p class="text-white text-justify text-lg font-extralight"><span class="mr-2 inline-block w-9 h-1 bg-amber-400 rounded"></span>Hello, I am Michael Amata, an aspiring web developer who is dedicated and knowledgeable, with a deep passion for creating web applications. My curiosity about the process of transforming design concepts into fully functional websites fuels my desire to explore the dynamic world of web development. I embrace challenges with enthusiasm and am constantly seeking to expand my skill set. With my dedication, I am committed to making a positive difference by contributing my skills to create impactful web applications</p>
                 </div>
             </div>
             <div class="flex flex-col items-center pb-10 w-full">
                 <h1 class="text-[1.6rem] pt-4 text-white">WORK EXPERIENCE</h1>
                 <div class="flex flex-wrap w-full gap-10 pb-10 pt-5 justify-center items-center">
-                    <div class="bg-sky-950 px-7 py-3 rounded-xl h-48 flex flex-col justify-center">
+                    <div data-aos="fade-down" class="bg-sky-950 px-7 py-3 rounded-xl h-48 flex flex-col justify-center">
                         <h1 class="text-amber-400 text-3xl font-semibold">Web Development Intern</h1>
                         <h1 class="text-white text-xl">BSIT Program Director's Office</h1>
                         <h1 class="text-white">Partido State University</h1>
                         <h1 class="text-white">Goa, Camarines Sur</h1>
                         <h1 class="text-white italic">February - May 2023</h1>
                     </div>
-                    <div class="bg-sky-950 px-7 py-3 rounded-xl h-48 flex flex-col justify-center">
+                    <div data-aos="fade-down" class="bg-sky-950 px-7 py-3 rounded-xl h-48 flex flex-col justify-center">
                         <h1 class="text-amber-400 text-3xl font-semibold">Graphic Artist</h1>
                         <h1 class="text-white text-xl">Fontaholic Graphic Arts & Printing</h1>
                         <h1 class="text-white">Goa, Camarines Sur</h1>
@@ -91,18 +111,46 @@
             </div>
             <div class="flex flex-col items-center pb-20">
                 <h1 class="text-[1.6rem] pt-4 text-white">WHAT CAN I DO?</h1>
-                <div class="flex gap-16 flex-wrap mt-5">
-                    <div class="shadow-lg flex justify-center items-center flex-col w-56 h-72 bg-gradient-to-b from-indigo-500 to-indigo-600 rounded-lg hover:to-indigo-800">
+                <div class="flex gap-6 md:gap-10 lg:gap-16 flex-wrap mt-5 justify-center items-center">
+                    <div data-aos="fade-left" class="group relative shadow-lg flex justify-center items-center flex-col w-56 h-72 bg-gradient-to-b from-indigo-500 to-indigo-600 rounded-lg hover:to-indigo-800">
                         <i class="fa-solid fa-code text-[5rem] text-white"></i>
                         <h1 class="text-white mt-10">Front-End Development</h1>
+                        <div class="text-center group-hover:block hidden transition-all duration-200 ease-in-out bg-gray-900 absolute px-4 py-2 gap-2 rounded-md">
+                            <h1 class="text-white">HTML</h1>
+                            <h1 class="text-white">CSS</h1>
+                            <h1 class="text-white">SASS</h1>
+                            <h1 class="text-white">JavaScript</h1>
+                            <h1 class="text-white">JQUERY</h1>
+                            <h1 class="text-white">TAILWIND CSS</h1>
+                            <h1 class="text-white">BOOTSTRAP</h1>
+                        </div>
                     </div>
-                    <div class="shadow-lg flex justify-center items-center flex-col w-56 h-72 bg-gradient-to-b from-indigo-500 to-indigo-600 rounded-lg transition-all ease-in-out duration-300 hover:ease-in-out hover:to-indigo-800">
+                    <div data-aos="fade-up" class="group shadow-lg flex justify-center items-center flex-col w-56 h-72 bg-gradient-to-b from-indigo-500 to-indigo-600 rounded-lg transition-all ease-in-out duration-300 hover:ease-in-out hover:to-indigo-800">
                         <i class="fa-solid fa-network-wired text-[5rem] text-white"></i>
                         <h1 class="text-white mt-10">Back-End Development</h1>
+                        <div class="text-center group-hover:block hidden transition-all duration-200 ease-in-out bg-gray-900 absolute px-4 py-2 gap-2 rounded-md">
+                            <h1 class="text-white">PHP</h1>
+                            <h1 class="text-white">MySQL</h1>
+                            <h1 class="text-white">MySQL Workbench</h1>
+                            <h1 class="text-white">Node.js</h1>
+                            <h1 class="text-white">Express.js</h1>
+                        </div>
                     </div>
-                    <div class="shadow-lg flex justify-center items-center flex-col w-56 h-72 bg-gradient-to-b from-indigo-500 to-indigo-600 rounded-lg hover:to-indigo-800">
+                    <div data-aos="fade-up" class="group shadow-lg flex justify-center items-center flex-col w-56 h-72 bg-gradient-to-b from-indigo-500 to-indigo-600 rounded-lg hover:to-indigo-800">
                         <i class="fa-regular fa-object-ungroup text-[5rem] text-white"></i>
                         <h1 class="text-white mt-10">Graphic Design</h1>
+                        <div class="text-center group-hover:block hidden transition-all duration-200 ease-in-out bg-gray-900 absolute px-4 py-2 gap-2 rounded-md">
+                            <h1 class="text-white">Adobe Photoshop</h1>
+                            <h1 class="text-white">Canva</h1>
+                        </div>
+                    </div>
+                    <div data-aos="fade-right" class="group py-2 px-4 shadow-lg flex justify-center text-center items-center flex-col w-56 h-72 bg-gradient-to-b from-indigo-500 to-indigo-600 rounded-lg hover:to-indigo-800">
+                        <i class="fa-solid fa-diagram-project text-[5rem] text-white"></i>
+                        <h1 class="text-white mt-10">Process Flowchart/Mapping</h1>
+                        <div class="text-center group-hover:block hidden transition-all duration-200 ease-in-out bg-gray-900 absolute px-4 py-2 gap-2 rounded-md">
+                            <h1 class="text-white">Diagrams.net</h1>
+                            <h1 class="text-white">Lucid Chart</h1>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -111,15 +159,15 @@
             <h1 class="text-[2rem] tracking-widest pt-8 text-white">PORTFOLIO</h1>
             <div class="px-24 py-12 w-full">
                 <h1 class="text-white text-xl tracking-wider mb-3">Web Development Projects</h1>
-                <div class="h-[430px] w-full bg-sky-900 px-8 py-4 mb-8 flex">
-                    <div class="relative border-2 border-white flex-1 p-3">
-                        <img class="absolute z-10 shadow-md" width="300" src="../dist/images/ParSU Graduate Tracer/s1.JPG" alt="Client Login">
-                        <img class="absolute z-20 shadow-md right-3 top-14" width="300" src="../dist/images/ParSU Graduate Tracer/s2.JPG" alt="Admin Login">
-                        <img class="absolute z-30 bottom-3 left-16 shadow-md" width="300" src="../dist/images/ParSU Graduate Tracer/s3.JPG" alt="Notification Modal">
+                <div data-aos="fade-right" class="min-h-[430px] w-full bg-sky-900 px-8 py-4 mb-8 flex flex-col lg:flex-row">
+                    <div class="flex flex-col justify-center items-center lg:block lg:flex-row lg:justify-normal lg:items-start gap-2 relative border-2 border-white flex-1 p-3">
+                        <img class="lg:absolute lg:z-10 shadow-md w-auto lg:w-[300px]" src="../dist/images/ParSU Graduate Tracer/s1.JPG" alt="Client Login">
+                        <img class="lg:absolute lg:z-20 shadow-md right-3 lg:top-14 w-auto lg:w-[300px]" src="../dist/images/ParSU Graduate Tracer/s2.JPG" alt="Admin Login">
+                        <img class="lg:absolute lg:z-30 bottom-3 lg:left-16 shadow-md w-auto lg:w-[300px]" src="../dist/images/ParSU Graduate Tracer/s3.JPG" alt="Notification Modal">
                     </div>
                     <div class="flex-1 p-4">
                         <h1 class="text-xl text-amber-400 font-semibold">Partido State University Graduate Tracer</h1>
-                        <p class="text-white my-1">Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto eligendi sapiente aut nihil debitis voluptas quidem voluptate architecto et inventore culpa aspernatur eaque, laudantium expedita, officia suscipit. Sapiente, soluta exercitationem.</p>
+                        <p class="text-white my-1 text-justify">A web application that registers ParSU alumni, allowing them to update their current life status and stay connected with the University. The application collects personal information, with a focus on current employment and achievements.</p>
                         <div class="mt-2">
                             <h1 class="text-amber-400">Techstacks used:</h1>
                             <div class="flex mt-2 gap-2 flex-wrap">
@@ -191,16 +239,16 @@
                         </div>
                     </div>
                 </div>
-                <div class="h-[430px] w-full bg-sky-900 px-8 py-4 flex flex-row-reverse">
-                    <div class="relative border-2 border-white flex-1 p-3">
-                        <img class="absolute z-10 shadow-md" width="300" src="../dist/images/ParSU Graduate Tracer/s1.JPG" alt="Client Login">
-                        <img class="absolute z-20 shadow-md right-3 top-14" width="300" src="../dist/images/ParSU Graduate Tracer/s2.JPG" alt="Admin Login">
-                        <img class="absolute z-30 bottom-3 left-16 shadow-md" width="300" src="../dist/images/ParSU Graduate Tracer/s3.JPG" alt="Notification Modal">
+                <div data-aos="fade-down" class="min-h-[430px] w-full bg-sky-900 px-8 py-4 flex flex-col lg:flex-row-reverse">
+                    <div class="flex lg:block justify-center lg:justify-normal items-center lg:items-start gap-2 flex-col relative border-2 border-white flex-1 p-3">
+                        <img class="lg:absolute lg:z-10 shadow-md w-auto lg:w-[300px]" src="../dist/images/ParSU Appointment System/a2.JPG" alt="Client Login">
+                        <img class="lg:absolute lg:z-20 shadow-md lg:right-3 lg:top-14 w-auto lg:w-[300px]" src="../dist/images/ParSU Appointment System/a3.JPG" alt="Admin Login">
+                        <img class="lg:absolute lg:z-30 lg:bottom-3 lg:left-16 shadow-md w-auto lg:w-[300px]" src="../dist/images/ParSU Appointment System/a1.JPG" alt="Notification Modal">
                     </div>
                     <div class="flex-1 p-4">
                         <h1 class="text-xl text-amber-400 font-semibold">Partido State University Frontline Services:</h1>
                         <h1 class="text-amber-400">Online Appointment Scheduling and Transaction System</h1>
-                        <p class="text-white my-1">Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto eligendi sapiente aut nihil debitis voluptas quidem voluptate architecto et inventore culpa aspernatur eaque, laudantium expedita, officia suscipit. Sapiente, soluta exercitationem.</p>
+                        <p class="text-white my-1 text-justify">A web-based system that was developed allowing the clients to set appointment according to their desired date and time, prepare required documents upon setting an appointment and eliminate long waiting queues, and also for the offices to monitor clients, manage transactions, and improving the quality of service. The system provided with barcode data based on the request transaction number that could be used for entrance checking and future purposes.</p>
                         <div class="mt-2">
                             <h1 class="text-amber-400">Techstacks used:</h1>
                             <div class="flex mt-2 gap-2 flex-wrap">
@@ -265,7 +313,67 @@
                     </div>
                 </div>
             </div>
+            <div class="px-24 w-full">
+                <h1 class="text-white text-xl tracking-wider mb-3">Graphic Design Projects</h1>
+                <div class="bg-white rounded-md gap-x-8 px-8 py-3 columns-1 sm:columns-2 md:columns-3 lg:columns-4">
+                    <figure data-aos="fade-up" class="py-4 break-inside-avoid-column">
+                        <img class="rounded-md shadow-md" src="https://drive.google.com/uc?export=view&id=1gT163PKWXOwj7Rk5txVsQQk6qoSBm6Ks" alt="">
+                        <figcaption class="mt-2">IT Final Defense Tarp</figcaption>
+                    </figure>
+                    <figure data-aos="fade-up" class="py-4 break-inside-avoid-column">
+                        <img class="rounded-md shadow-md" src="https://drive.google.com/uc?export=view&id=160GIwO9wMru37JOeAKbK0Yi67OlzISrZ" alt="">
+                        <figcaption class="mt-2">Congratulations, Nathan!</figcaption>
+                    </figure>
+                    <figure data-aos="fade-up" class="py-4 break-inside-avoid-column">
+                        <img class="rounded-md shadow-md" src="https://drive.google.com/uc?export=view&id=10Fsic6I4bcOtVpToO_BX6cjJTYayy27-" alt="">
+                        <figcaption class="mt-2">Team K Capstone Tarp</figcaption>
+                    </figure>
+                    <figure data-aos="fade-up" class="py-4 break-inside-avoid-column">
+                        <img class="rounded-md shadow-md" src="https://drive.google.com/uc?export=view&id=1Pa0ElerPqMAareJaq7JUDiGMx_-x3H5N" alt="">
+                        <figcaption class="mt-2">Akia Elijah Baptism</figcaption>
+                    </figure>
+                    <figure data-aos="fade-up" class="py-4 break-inside-avoid-column">
+                        <img class="rounded-md shadow-md" src="https://drive.google.com/uc?export=view&id=1DN7NayS-Iex03db-zsEvUchBexEYgipi" alt="">
+                        <figcaption class="mt-2">Happy Birthday, VP Leni</figcaption>
+                    </figure>
+                    <figure data-aos="fade-up" class="py-4 break-inside-avoid-column">
+                        <img class="rounded-md shadow-md" src="https://drive.google.com/uc?export=view&id=1tBU4is_JYB9R8IA1q-qHTMHR92Xe8WKw" alt="">
+                        <figcaption class="mt-2">Happy Birthday, Mama Sonia</figcaption>
+                    </figure>
+                    <figure data-aos="fade-up" class="py-4 break-inside-avoid-column">
+                        <img class="rounded-md shadow-md" src="https://drive.google.com/uc?export=view&id=1uHSYefOvhtSqk5bBJbK-pR3c_7gTJaAP" alt="">
+                        <figcaption class="mt-2">PISAY Polo Mockup</figcaption>
+                    </figure>
+                    <figure data-aos="fade-up" class="py-4 break-inside-avoid-column">
+                        <img class="rounded-md shadow-md" src="https://drive.google.com/uc?export=view&id=1QmeJLa7T4wfyy2MwNFBzKeMDLmVoJLN-" alt="">
+                        <figcaption class="mt-2">Casureco IV Logo Competition</figcaption>
+                    </figure>
+                    <figure data-aos="fade-up" class="py-4 break-inside-avoid-column">
+                        <img class="rounded-md shadow-md" src="https://drive.google.com/uc?export=view&id=16kJJSqH4dmS_dTJQ23lVmRNRjwap9Zk3" alt="">
+                        <figcaption class="mt-2">Happy Birthday, Ate Anna</figcaption>
+                    </figure>
+                    <figure data-aos="fade-up" class="py-4 break-inside-avoid-column">
+                        <img class="rounded-md shadow-md" src="https://drive.google.com/uc?export=view&id=12x5GbPtFdQtOBqB5ldQRZ5Atxyzt9YHc" alt="">
+                        <figcaption class="mt-2">Composite Editing 1</figcaption>
+                    </figure>
+                    <figure data-aos="fade-up" class="py-4 break-inside-avoid-column">
+                        <img class="rounded-md shadow-md" src="https://drive.google.com/uc?export=view&id=1I3EUsXmKoVlosItso8PgfElEi-a-Bw7S" alt="">
+                        <figcaption class="mt-2">Composite Editing 2</figcaption>
+                    </figure>
+                    <figure data-aos="fade-up" class="py-4 break-inside-avoid-column">
+                        <img class="rounded-md shadow-md" src="https://drive.google.com/uc?export=view&id=1-LOSRT2uXmCSWWIT80tuIriQPqh0M_Uh" alt="">
+                        <figcaption class="mt-2">Kendra Alliah at 7</figcaption>
+                    </figure>
+                </div>
+            </div>
+        </section>
+        <section class="text-center my-8">
+            <a class="text-white" href="#home">Back to top</a>
         </section>
     </main>
+    <footer class="bg-sky-900 min-h-[100px] mt-6 flex justify-center items-center">
+        <h1 class="text-white">&copy; 2023 Michael Bersola Amata | <a class="underline hover:text-amber-400" href="https://github.com/michlovesuall" target="_blank">Github</a>. All Rights Reserved.</h1>
+    </footer>
+    <script src="/dist/js/main.js"></script>
 </body>
 </html>
